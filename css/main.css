@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Inter;
+  font-weight: 400;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1440px;
+  max-height: 96px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 31px;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo-title {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.header__logo-svg {
+  cursor: pointer;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+.header__menu-element {
+  font-size: 1.6rem;
+  color: #72787D;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.header__menu-element:hover {
+  color: #036FC7;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.header__menu-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: Arial;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  font-weight: 400;
+  text-decoration: none;
+  width: 14.3rem;
+  height: 3.4rem;
+  background: #212B31;
+  border: 1px solid #212B31;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+}
+
+.header__menu-order:hover {
+  background: #3f505a;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container {
+  max-width: 1056px;
+}
+/*# sourceMappingURL=main.css.map */
