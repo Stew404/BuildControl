@@ -1,0 +1,63 @@
+@media (max-width: 1199px)
+   html
+      font-size: 9px
+   .header__logo-title
+      display: none
+
+
+@media (max-width: 899px)
+   html
+      font-size: 8px
+   .header
+      &__logo-title
+         display: block
+      &__menu
+         display: none
+      &__button
+         display: flex
+   .main 
+      max-height: 50vh
+      background: no-repeat 50% 100% / contain url("../img/main-bg-1.webp")
+   .care
+      align-items: center
+      padding: 0 50px
+
+      text-align: center
+      
+      &__img
+         display: none
+      
+
+@media (max-width: 699px)
+   html
+      font-size: 7px
+   .chaos
+      &__img
+         display: block
+         width: 100vw
+
+
+
+@media (max-width: 419px)
+   html
+      font-size: 7px
+   .main
+      padding: 7.5rem 4rem 0 4rem
+      background: none
+      &__button
+         flex-direction: column
+         &-order
+            margin-right: 0
+            margin-bottom: 5px
+         &-more
+            width: 16.6rem
+   .capabilities
+      flex-direction: column
+      padding: 0 60px
+      &__element
+         margin-top: 10px
+   .chaos
+      &__img
+         display: none
+   .course
+      padding: 0 4rem

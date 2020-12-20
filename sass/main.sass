@@ -1,4 +1,6 @@
 @import "fonts"
+@import "variables"
+
 
 *
    box-sizing: border-box
@@ -6,14 +8,19 @@
 html
    font-size: 10px
 
+
 body
    font-family: Inter
    font-weight: 400
+
+h1,h2,h3,h4,h5,h6
+   margin: 0
 
 .header
 
    display: flex
    justify-content: space-between
+   align-items: center
 
    max-width: 1440px
    max-height: 96px
@@ -40,19 +47,22 @@ body
    &__menu
       display: flex
       align-items: center
-      justify-content: space-between
+      
+      
 
-      width: 60%
+
 
       &-element
          font-size: 1.6rem
 
-         color: #72787D;
+         color: $grey;
 
 
          cursor: pointer
 
          transition: .2s
+
+         margin-right: 2.2rem
 
          &:hover
             color: #036FC7
@@ -74,8 +84,8 @@ body
          width: 14.3rem
          height: 3.4rem
 
-         background: #212B31
-         border: 1px solid #212B31
+         background: $black
+         border: 1px solid $black
          box-sizing: border-box
          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16)
          border-radius: 4px
@@ -83,9 +93,226 @@ body
          &:hover
             background: #3f505a
             transition: .2s
-         
+   
+   &__button
+      display: none
+      align-items: center
+      justify-content: center
+      padding: 5px 5px
+
+      cursor: pointer
+      &:hover
+         background-color: #b8b8b852
 
 
 
 .container 
    max-width: 1056px
+   margin: 0 auto
+   padding: 0 10px
+
+/** Main **/
+
+.main
+
+   max-height: 792px
+   height: 100vh
+
+   padding: 7.5rem 12rem 0 12rem
+
+   background: no-repeat 50% 37rem / contain url("../img/main-bg-1.webp"),
+   no-repeat  50% 73.4rem / 75% url("../img/main-bg-2.webp")
+ 
+
+   &__heading
+      font-size: 4.8rem
+      font-weight: 400
+      line-height: 6.4rem
+
+      color: $black
+
+      text-align: center
+
+   &__button
+      display: flex
+      align-items: center
+      justify-content: center
+
+      margin-top: 30px
+
+
+      &-order
+         display: flex
+         justify-content: center
+         align-items: center
+         color:#fff
+
+         font-family: Arial
+         font-size: 1.7rem
+         line-height: 2.4rem
+         font-weight: 400
+         text-decoration: none 
+
+         width: 16.6rem
+         height: 5rem
+
+         background: $black
+         border: 1px solid $black
+         box-sizing: border-box
+         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16)
+         border-radius: 4px
+
+         margin-right: 16px
+         
+         &:hover
+            background: #3f505a
+            transition: .2s
+         
+      &-more
+         display: flex
+         justify-content: center
+         align-items: center
+
+         width: 14.9rem
+         height: 5rem
+
+         background: $white
+         border: 1px solid #DADEDF
+         border-radius: 4px
+
+         font-size: 1.8rem
+         line-height: 2.4rem
+         text-decoration: none
+
+         color: $black
+
+/** Capabilities **/
+
+.capabilities
+   display: flex
+
+   margin-top: 15rem
+   &__element
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      text-align: center
+      &-heading
+         color: $black
+
+         font-size: 1.8rem
+         font-weight: 400
+         line-height: 2.4rem
+
+         margin-top: 20px
+      &-description
+         color: $grey
+
+         font-size: 1.6rem
+         font-weight: 400
+         line-height: 2.4rem
+
+         margin-top: 10px
+
+/** Chaos **/
+
+.chaos
+   display: flex
+   flex-direction: column
+   align-items: center
+
+   text-align: center
+
+   margin-top: 14rem
+   &__heading
+      font-size: 3.2rem
+      font-weight: 400
+      line-height: 4.8rem
+
+      color: $black
+   &__description
+      color: $grey
+
+      font-size: 2rem
+      font-weight: 400
+      line-height: 3.2rem
+
+/** Course **/
+
+.course
+   margin-top: 14.5rem
+
+   padding: 0 13rem
+   &__heading
+      color: $black
+
+      font-size: 3.2rem
+      font-weight: 400
+      line-height: 4.8rem
+
+      text-align: center
+
+
+
+/** Care **/
+
+.care
+   display: flex
+   flex-direction: column
+   align-items: start
+
+   position: relative
+
+   padding-right: 47%
+
+   margin-top: 17rem
+
+   &__heading
+      font-size: 3.2rem
+      font-weight: 400
+      line-height: 4.8rem
+
+      color: $black
+
+   &__description
+      font-size: 2rem
+      font-weight: 400
+      line-height: 3.2rem
+
+      color: $grey
+
+   &__help
+      font-size: 2rem
+      font-weight: 400
+      line-height: 3.2rem
+
+      color: $black
+
+      background: no-repeat 0 100% / 100% 50% url("../img/care/care__help-bg.webp")
+   
+   &__img
+      position: absolute
+
+      right: 0
+
+/** Partners **/
+
+.partners
+   display: flex
+   justify-content: space-around
+   align-items: center
+   flex-wrap: wrap
+
+   padding: 5.6rem 0
+   margin-top: 15.5rem
+
+   border: 1px solid #EEF2F3
+   border-right: none
+   border-left: none
+
+   &__img
+      margin: 0 5px
+
+
+@import "media"
