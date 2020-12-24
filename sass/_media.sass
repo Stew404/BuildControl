@@ -4,6 +4,14 @@
    .header__logo-title
       display: none
 
+   .delivery
+      &__products
+         padding: 0 15rem
+
+   .safety
+      &__equipment
+         width: 100vw
+
 
 @media (max-width: 899px)
    html
@@ -26,16 +34,72 @@
       
       &__img
          display: none
+
+   .about
+      &__capabilities
+         &-block
+            padding: 0
+            &:nth-child(2n)
+               padding: 0
+         &-img
+            
       
+   .delivery
+      &__products
+         padding: 0 7rem
+         &-block
+            &:nth-child(n+4)
+               margin-top: 0
+            &:nth-child(n+3)
+               margin-top: 3.5rem
+   
+   .safety
+      &__equipment
+         padding: 2rem
+
+         &-heading
+            display: flex
+            flex-direction: column
+
+            margin: 0 0.5rem
+
 
 @media (max-width: 699px)
    html
-      font-size: 7px
+      font-size: 8px
    .chaos
       &__img
          display: block
          width: 100vw
+   .about
+      &__capabilities
+         &-block
+            flex-direction: column-reverse
+            padding: 0 15rem
+            &:nth-child(2n)
+               flex-direction: column-reverse
+               padding: 0 15rem
+         &-text
+            text-align: center
 
+            margin-top: 1.5rem
+         
+   .delivery
+      &__description
+         padding: 0 5rem
+      &__products
+         justify-content: space-around
+         &-block
+            max-width: 55rem
+            &:nth-child(n)
+               margin-top: 0
+            &:nth-child(n+2)
+               margin-top: 3.5rem
+
+   .safety
+      &__capabilities
+         &-block
+            flex-basis: 45%
 
 
 @media (max-width: 419px)
@@ -61,3 +125,13 @@
          display: none
    .course
       padding: 0 4rem
+
+   .safety
+      &__capabilities
+         &-block
+            flex-basis: 100%
+      
+      &__equipment
+         padding-top: 3rem
+         &-img
+            display: none

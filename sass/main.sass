@@ -1,5 +1,6 @@
 @import "fonts"
 @import "variables"
+@import "mixins"
 
 
 *
@@ -125,6 +126,7 @@ h1,h2,h3,h4,h5,h6
  
 
    &__heading
+      
       font-size: 4.8rem
       font-weight: 400
       line-height: 6.4rem
@@ -199,21 +201,12 @@ h1,h2,h3,h4,h5,h6
 
       text-align: center
       &-heading
-         color: $black
+         
+         @include subheading
 
-         font-size: 1.8rem
-         font-weight: 400
-         line-height: 2.4rem
-
-         margin-top: 20px
       &-description
-         color: $grey
-
-         font-size: 1.6rem
-         font-weight: 400
-         line-height: 2.4rem
-
-         margin-top: 10px
+         
+         @include subdescription
 
 /** Chaos **/
 
@@ -232,11 +225,8 @@ h1,h2,h3,h4,h5,h6
 
       color: $black
    &__description
-      color: $grey
-
-      font-size: 2rem
-      font-weight: 400
-      line-height: 3.2rem
+      
+      @include description
 
 /** Course **/
 
@@ -245,13 +235,8 @@ h1,h2,h3,h4,h5,h6
 
    padding: 0 13rem
    &__heading
-      color: $black
-
-      font-size: 3.2rem
-      font-weight: 400
-      line-height: 4.8rem
-
-      text-align: center
+      
+      @include heading
 
 
 
@@ -269,18 +254,12 @@ h1,h2,h3,h4,h5,h6
    margin-top: 17rem
 
    &__heading
-      font-size: 3.2rem
-      font-weight: 400
-      line-height: 4.8rem
 
-      color: $black
+      @include heading
 
    &__description
-      font-size: 2rem
-      font-weight: 400
-      line-height: 3.2rem
-
-      color: $grey
+      
+      @include description
 
    &__help
       font-size: 2rem
@@ -313,6 +292,223 @@ h1,h2,h3,h4,h5,h6
 
    &__img
       margin: 0 5px
+
+/** About **/
+
+.about
+   display: flex
+   flex-direction: column
+   align-items: center
+   
+   margin-top: 8rem
+
+   &__heading
+
+      @include heading
+
+   &__description
+
+      @include description
+
+   &__capabilities
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      &-block
+         display: flex
+         justify-content: space-between
+         align-items: center
+
+         margin-top: 6.5rem
+         padding-right: 6rem
+
+         &:nth-child(2n)
+            flex-direction: row-reverse
+            padding-right: 0
+            padding-left: 6rem
+
+      &-text
+         display: flex
+         flex-direction: column
+         flex-basis: 50%
+
+         &-heading
+               
+            @include subheading
+
+         &-description
+
+            @include subdescription
+
+      &-img
+         width: 42rem
+         height: 27.2rem
+
+/** Delivery **/
+
+.delivery
+   display: flex
+   flex-direction: column
+   align-items: center
+   
+   margin-top: 14rem
+
+   &__heading
+      @include heading
+
+   &__description
+      @include description
+
+      padding: 0 15rem
+
+   &__products
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+
+      margin-top: 4rem
+      
+
+      &-block
+         display: flex
+         justify-content: space-between
+         align-items: start
+         
+         max-width: 33.4rem
+
+         &:nth-child(n+4)
+            margin-top: 3.5rem
+
+            
+
+
+      &-img
+         min-width: 50px
+         min-height: 50px
+
+         margin-right: 1.5rem
+
+
+      &-text
+         display: flex
+         flex-direction: column
+
+         
+
+         &-subheading
+            @include subheading
+
+            margin-bottom: 1rem
+         
+         &-subdescription
+            @include subdescription
+
+   &__other
+      @include description
+
+      margin-top: 2rem
+
+      &_yellow-bg
+         color: $black
+
+         background: no-repeat 0 100% / 100% 50% url("../img/care/care__help-bg.webp")
+
+/** Safety **/
+
+.safety
+   display: flex
+   flex-direction: column
+   align-items: center
+
+   margin-top: 15rem
+
+   &__heading
+
+      @include heading
+
+   &__description
+
+      @include description
+
+   &__capabilities
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+
+      margin-top: 6rem
+
+      &-block
+         display: flex
+         flex-direction: column
+         align-items: center
+
+         text-align: center
+
+         flex-basis: 33%
+
+         &-img
+            min-width: 50px
+            min-height: 50px
+
+            margin-bottom: 20px
+
+         &-subheading
+            @include subheading
+
+         &-subdescription
+            @include subdescription
+
+   &__equipment
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      background: #F6F8F9
+
+      padding: 0 4rem
+
+      width: 100%
+      height: 13rem
+      
+      line-height: 3.2rem
+
+      color: $black
+
+      margin-top: 6rem
+
+      &-heading
+         font-size: 1.8rem
+         font-weight: 500
+
+      &-description
+         font-size: 1.8rem
+         font-weight: 400
+      
+      &-more
+         display: flex
+         align-items: center
+         justify-content: center
+
+         text-decoration: none
+         font-size: 1.8rem
+         font-weight: 400
+         line-height: 2.4rem
+
+         color: $black
+
+         min-width: 15rem
+         min-height: 5rem
+
+         background: #FFFFFF
+         border: 1px solid #DADEDF
+         border-radius: 4px
+
+         &:hover
+            background: #8b8d9b41
+            transition: .2s
+
 
 
 @import "media"
