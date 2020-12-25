@@ -795,4 +795,137 @@ h1,h2,h3,h4,h5,h6
 
          color: $black
 
+/** Choose **/
+
+.choose
+   display: flex
+   flex-direction: column
+   align-items: center
+
+   margin-top: 10rem
+
+   margin-bottom: 10rem
+
+   &__heading
+      @include heading
+
+   &__description
+      @include description
+
+      color: $black
+
+   &__reasons
+      display: flex
+      justify-content: space-between
+      margin-top: 5rem
+
+      &-rewards 
+         display: flex
+         flex-direction: column
+         flex-basis: 45%
+
+      &-item
+         display: flex
+         align-items: start
+
+         margin-bottom: 3rem
+
+      &-img
+         min-width: 50px
+         min-height: 50px
+
+         margin-right: 1rem
+
+      &-text
+         display: flex
+         flex-direction: column
+
+         &-subheading
+            @include subheading
+
+            margin-bottom: 1rem
+
+         &-subdescription
+            @include subdescription
+
+      &-reviews
+         flex-basis: 42%
+         
+         position: relative
+
+         &:before
+            content: ""
+            display: block
+            background-color: #F6F8F9
+            z-index: -2
+
+            width: 61.4rem
+            height: 90%
+
+            position: absolute
+
+            left: 50%
+
+            transform: translateX(-50%)
+
+      &-comment
+         display: flex
+         flex-direction: column
+         align-items: start
+
+         &-text
+            font-size: 3rem
+            line-height: 4.8rem
+
+            margin-top: 6rem
+
+            color: $black
+
+            position: relative
+
+            &:before
+               content: ""
+               display: block
+               background: no-repeat 0 0 / contain url('../img/choose/comment-bg.webp')
+
+               width: 10.4rem
+               height: 8rem
+
+               position: absolute
+
+               transform: translate(-45%, -20%)
+
+               z-index: -1
+
+         &-profile
+            display: flex
+            flex-direction: column
+
+            position: relative
+
+            margin-left: 5.5rem
+            margin-bottom: 3rem
+
+         &-photo
+            position: absolute
+
+            left: -5.5rem
+
+            width: 5rem
+            height: 5rem
+
+         &-name
+            font-size: 1.6rem
+            line-height: 1.9rem
+            font-weight: 400
+
+            color: $black
+
+         &-position
+            font-size: 1.6rem
+            line-height: 1.9rem
+            font-weight: 400
+
+            color: $grey
+
 @import "media"
