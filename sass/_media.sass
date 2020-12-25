@@ -12,6 +12,13 @@
       &__equipment
          width: 100vw
 
+   .build
+      &__bg
+         background: $black
+      &__features
+         margin: 0 auto
+
+
 
 @media (max-width: 899px)
    html
@@ -100,6 +107,37 @@
       &__capabilities
          &-block
             flex-basis: 45%
+
+   .build
+      &__features
+         &-subdescription
+            display: none
+      &__capabilities
+         flex-wrap: wrap
+         justify-content: space-around
+
+         &-block
+            flex-basis: 45%
+
+   .work
+      flex-direction: column
+      justify-content: space-around
+
+      &__head
+         flex-basis: 70%
+         &-heading
+            text-align: center
+
+         &-description
+            text-align: center
+
+         &-img
+            min-width: calc(33.6rem/2)
+            min-height: calc(39.2rem/2)
+      
+      &__content
+         align-items: center
+
 
 
 @media (max-width: 419px)

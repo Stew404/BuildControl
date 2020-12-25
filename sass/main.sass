@@ -14,6 +14,8 @@ body
    font-family: Inter
    font-weight: 400
 
+   overflow-x: hidden
+
 h1,h2,h3,h4,h5,h6
    margin: 0
 
@@ -510,5 +512,287 @@ h1,h2,h3,h4,h5,h6
             transition: .2s
 
 
+/** Build **/
+
+.build 
+
+   padding-top: 14rem
+   padding-bottom: 12rem
+   margin-top: 14rem
+
+   position: relative
+
+   &__bg
+      background: no-repeat 105% 21% url("../img/build/build-bg.webp"), $black
+                  
+
+      width: 100vw
+      height: 100%
+
+      position: absolute
+
+      top: 0
+      right: 50%
+
+      transform: translateX(50%)
+
+      z-index: -1
+   
+   &__features
+      max-width: 55%
+
+      &-heading
+         @include heading
+
+         color: $white
+         text-align: left
+
+      &-list
+         padding: 0
+         margin: 5rem 0 0 0
+
+      &-item
+         list-style-type: none
+
+         margin-left: 4rem
+         margin-top: 2.4rem
+         position: relative
+         &:before
+            content: ""
+
+            display: block
+
+            position: absolute
+            
+            top: 0.8rem
+            left: -4rem
+
+            background-color: $white
+
+            width: 8px
+            height: 8px
+
+            border-radius: 50%
+
+      &-subheading
+         @include subheading
+
+         color: $white
+
+      &-subdescription
+         @include subdescription
+
+         color: #ffffffbe
+
+      &-buttons
+         display: flex
+
+         margin-top: 5rem
+
+      &-order
+         display: flex
+         justify-content: center
+         align-items: center
+         color: $black
+
+         font-family: Arial
+         font-size: 1.7rem
+         line-height: 2.4rem
+         font-weight: 400
+         text-decoration: none 
+
+         width: 16.6rem
+         height: 5rem
+
+         background: $white
+         border: 1px solid $grey
+         box-sizing: border-box
+         border-radius: 4px
+
+         margin-right: 16px
+         
+         &:hover
+            background: #3f505a
+            transition: .2s
+         
+      &-more
+         display: flex
+         justify-content: center
+         align-items: center
+
+         width: 14.9rem
+         height: 5rem
+
+         background: $black
+         border: 1px solid $grey
+         border-radius: 4px
+
+         font-size: 1.8rem
+         line-height: 2.4rem
+         text-decoration: none
+
+         color: $white
+   
+   &__capabilities
+      display: flex
+      justify-content: space-between
+
+      width: 100%
+
+      margin-top: 14rem
+
+      &-block
+         display: flex
+         flex-direction: column
+         align-items: center
+         text-align: center
+
+         flex-basis: 32%
+
+         &-img
+            min-width: 50px
+            min-height: 50px
+
+            margin-bottom: 20px
+         &-subheading
+            @include subheading
+
+            color: $white
+
+            margin-bottom: 10px
+
+         &-subdescription
+            @include subdescription
+
+            color #ffffffbe
+
+            margin: 0
+
+/** Work **/
+
+.work
+   display: flex
+   justify-content: space-between
+
+   margin-top: 14rem
+
+   &__head
+      flex-basis: 44%
+      
+
+      &-heading
+         @include heading
+         text-align: left
+
+         margin-bottom: 2rem
+
+      &-description
+         @include description
+         text-align: left
+
+         margin-bottom: 6rem
+
+      &-img
+         min-width: 33.6rem
+         min-height: 39.2rem
+
+   &__content
+      flex-basis: 49%
+
+      display: flex
+      flex-direction: column
+
+      &-list
+         padding: 0
+         margin: 0 0 0 7rem
+
+         counter-reset: my-counter
+
+      &-item
+         list-style-type: none
+
+         position: relative
+
+         &::before
+            content: counter(my-counter)
+            counter-increment: my-counter
+
+            display: flex
+            align-items: center
+            justify-content: center
+
+            font-size: 1.6rem
+
+            width: 4rem
+            height: 4rem
+
+            border: 1px solid #DADEDF
+
+            position: absolute
+
+            left: -7rem
+
+
+      &-subheading
+         @include subheading
+
+         
+            
+
+      &-subdescription
+         @include subdescription
+
+         font-size: 1.7rem
+
+      &-buttons
+         display: flex
+
+         margin-top: 30px
+
+
+      &-order
+         display: flex
+         justify-content: center
+         align-items: center
+         color:#fff
+
+         font-family: Arial
+         font-size: 1.7rem
+         line-height: 2.4rem
+         font-weight: 400
+         text-decoration: none 
+
+         width: 16.6rem
+         height: 5rem
+
+         background: $black
+         border: 1px solid $black
+         box-sizing: border-box
+         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16)
+         border-radius: 4px
+
+         margin-right: 16px
+         
+         &:hover
+            background: #3f505a
+            transition: .2s
+         
+      &-more
+         display: flex
+         justify-content: center
+         align-items: center
+
+         width: 14.9rem
+         height: 5rem
+
+         background: $white
+         border: 1px solid #DADEDF
+         border-radius: 4px
+
+         font-size: 1.8rem
+         line-height: 2.4rem
+         text-decoration: none
+
+         color: $black
 
 @import "media"
