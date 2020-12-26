@@ -538,7 +538,7 @@ h1,h2,h3,h4,h5,h6
       z-index: -1
    
    &__features
-      max-width: 55%
+      max-width: 60%
 
       &-heading
          @include heading
@@ -587,6 +587,7 @@ h1,h2,h3,h4,h5,h6
          display: flex
 
          margin-top: 5rem
+         
 
       &-order
          display: flex
@@ -926,5 +927,224 @@ h1,h2,h3,h4,h5,h6
             font-weight: 400
 
             color: $grey
+
+/** Rewards **/
+
+.rewards
+   display: flex
+   flex-wrap: wrap
+   justify-content: space-around
+   align-items: baseline
+
+   padding: 0 19.2rem
+
+   &__block
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      flex-basis: 30%
+
+      margin-bottom: 4rem
+
+      &-description
+         @include subdescription
+
+         margin-top: 3rem
+         padding: 0 3rem
+         text-align: center
+
+/** Contact **/
+
+.contact
+   display: flex
+   flex-direction: column
+   align-items: center
+
+   background: no-repeat 0 0 / cover url('../img/contact/contact-bg.webp')
+
+
+   padding: 11.7rem 2rem
+
+   margin-top: 15rem
+
+   width: 100%
+
+   border-radius: 6px
+
+   &__heading
+      font-size: 4.8rem
+      font-weight: 400
+      line-height: 6.4rem
+      text-align: center
+
+      margin-bottom: 5.4rem
+
+   &__buttons
+
+      display: flex
+
+      &-order
+         display: flex
+         justify-content: center
+         align-items: center
+         color:#fff
+
+         font-family: Arial
+         font-size: 1.7rem
+         line-height: 2.4rem
+         font-weight: 400
+         text-decoration: none 
+
+         width: 16.6rem
+         height: 5rem
+
+         background: $black
+         border: 1px solid $black
+         box-sizing: border-box
+         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16)
+         border-radius: 4px
+
+         margin-right: 16px
+         
+         &:hover
+            background: #3f505a
+            transition: .2s
+         
+      &-connect
+         display: flex
+         justify-content: center
+         align-items: center
+
+         width: 18.2rem
+         height: 5rem
+
+         background: $white
+         border: 1px solid #DADEDF
+         border-radius: 4px
+
+         font-size: 1.8rem
+         line-height: 2.4rem
+         text-decoration: none
+
+         color: $black
+
+/** Footer **/
+
+.footer
+
+   margin-top: 15rem
+
+   &__menu
+
+      display: flex
+      justify-content: space-between
+
+      margin-bottom: 16rem
+
+      &-contacts
+         display: flex
+         flex-direction: column
+         align-items: start
+
+         color : $grey
+
+         @include subdescription
+
+
+      &-company
+         display: flex
+         align-items: center
+
+         margin-bottom: 2.2rem
+
+      &-name
+         font-size: 1.6rem
+         line-height: 1.9rem
+         text-transform: uppercase
+
+         color: $black
+
+         margin-left: 0.8rem
+
+      &-address
+         display: flex
+         flex-direction: column
+         align-items: start
+
+         margin-bottom: 1rem
+
+
+      &-communicate
+         display: flex
+         flex-direction: column
+         align-items: start
+
+         margin-bottom: 2rem
+         
+      &-email, &-phone, &-social
+         text-decoration: none
+         color: $grey
+
+         &:hover
+            color: #acb1b4
+            transform: scale(1.1)
+            transition-duration: .2s
+
+      &-nav
+         display: flex
+         justify-content: space-between
+         flex-basis: 60%
+
+         &-column
+            display: flex
+            flex-direction: column
+
+
+
+         &-heading
+            font-size: 1.6rem
+            font-weight: 400
+
+            color: $black
+
+            margin-bottom: 2.2rem
+
+         &-item
+            font-size: 1.6rem
+            margin-bottom: 0.8rem
+            text-decoration: none
+
+            color: $grey
+
+            &:hover
+               color: #acb1b4
+               transform: scale(1.1) translateX(4%)
+               transition-duration: .2s
+
+   &__rights
+      display: flex
+      justify-content: space-between
+
+      font-size: 1.6rem
+      line-height: 2.4rem
+      font-weight: 400
+
+      padding: 3.3rem 0
+
+      border-top: 1px solid #DADEDF
+
+      &-copyright
+         color: $grey
+
+      &-confidentiality
+         color: $grey
+         text-decoration: none
+
+         &:hover
+            color: #acb1b4
+            transform: scale(1.1)
+            transition-duration: .2s
+
 
 @import "media"
