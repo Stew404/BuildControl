@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: .2s;
   transition: .2s;
   margin-right: 2.2rem;
+  text-decoration: none;
 }
 
 .header__menu-element:hover {
