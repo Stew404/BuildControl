@@ -47,12 +47,11 @@ h1,h2,h3,h4,h5,h6
          cursor: pointer
 
    &__menu
-      display: flex
-      align-items: center
-      
-      
+      &_desktop
+         display: flex
+         align-items: center
 
-
+         position: relative
 
       &-element
          font-size: 1.6rem
@@ -97,12 +96,75 @@ h1,h2,h3,h4,h5,h6
          &:hover
             background: #3f505a
             transition: .2s
+
+      &_mobile
+         display: none
+         flex-direction: column
+         justify-content: space-between
+         align-items: center
+
+         padding: 35rem 0
+
+         background-color: #fff
+
+         box-shadow: -1px 0 20px 1px $black
+
+         width: 50%
+         height: 100%
+
+         position: fixed
+
+         top: 0
+         right: 0
+
+         transform: translateX(100%)
+
+         z-index: 10
+
+         .header__menu-element
+
+            font-size: 2.5rem
+            text-transform: uppercase
+
+            margin: 0
+
+         .header__menu-order
+
+            font-size: 2.5rem
+
+            width: 21.4rem
+            height: 5rem
+
+            margin-top: 5rem
+
+      &-close
+         display: flex
+
+         border: none
+         background: none
+
+         border-radius: 50%
+
+         position: absolute
+
+         padding: 10px
+         
+         top: 20px
+         left: 20px
+
+         &:hover
+            background-color: #72787d2a
+            transition: .2s
+
    
    &__button
       display: none
       align-items: center
       justify-content: center
       padding: 5px 5px
+
+      background: none
+      border: none
 
       cursor: pointer
       &:hover

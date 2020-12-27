@@ -66,13 +66,14 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.header__menu {
+.header__menu_desktop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .header__menu-element {
@@ -124,6 +125,64 @@ h1, h2, h3, h4, h5, h6 {
   transition: .2s;
 }
 
+.header__menu_mobile {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35rem 0;
+  background-color: #fff;
+  -webkit-box-shadow: -1px 0 20px 1px #212B31;
+          box-shadow: -1px 0 20px 1px #212B31;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  z-index: 10;
+}
+
+.header__menu_mobile .header__menu-element {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header__menu_mobile .header__menu-order {
+  font-size: 2.5rem;
+  width: 21.4rem;
+  height: 5rem;
+  margin-top: 5rem;
+}
+
+.header__menu-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  position: absolute;
+  padding: 10px;
+  top: 20px;
+  left: 20px;
+}
+
+.header__menu-close:hover {
+  background-color: #72787d2a;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 .header__button {
   display: none;
   -webkit-box-align: center;
@@ -133,6 +192,8 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5px 5px;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -1574,8 +1635,13 @@ h1, h2, h3, h4, h5, h6 {
   .header__logo-title {
     display: block;
   }
-  .header__menu {
+  .header__menu_desktop {
     display: none;
+  }
+  .header__menu_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header__button {
     display: -webkit-box;
@@ -1629,6 +1695,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 699px) {
   html {
     font-size: 8px;
+  }
+  .header__menu_mobile {
+    width: 100vw;
   }
   .chaos__img {
     display: block;
