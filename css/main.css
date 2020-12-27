@@ -131,13 +131,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 35rem 0;
   background-color: #fff;
   -webkit-box-shadow: -1px 0 20px 1px #212B31;
           box-shadow: -1px 0 20px 1px #212B31;
@@ -154,13 +153,13 @@ h1, h2, h3, h4, h5, h6 {
 .header__menu_mobile .header__menu-element {
   font-size: 2.5rem;
   text-transform: uppercase;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .header__menu_mobile .header__menu-order {
   font-size: 2.5rem;
   width: 21.4rem;
-  height: 5rem;
+  min-height: 5rem;
   margin-top: 5rem;
 }
 
@@ -1698,6 +1697,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .header__menu_mobile {
     width: 100vw;
+    height: 100vh;
   }
   .chaos__img {
     display: block;
