@@ -265,6 +265,13 @@ h1,h2,h3,h4,h5,h6
       align-items: center
 
       text-align: center
+
+      &-img
+         max-width: 5rem
+         max-height: 5rem
+
+         margin-bottom: 1rem
+         
       &-heading
          
          @include subheading
@@ -434,6 +441,8 @@ h1,h2,h3,h4,h5,h6
       justify-content: space-between
 
       margin-top: 4rem
+
+      position: relative
       
 
       &-block
@@ -443,15 +452,14 @@ h1,h2,h3,h4,h5,h6
          
          max-width: 33.4rem
 
-         &:nth-child(n+4)
-            margin-top: 3.5rem
+         margin-bottom: 3rem
 
             
 
 
       &-img
-         min-width: 50px
-         min-height: 50px
+         min-width: 5rem
+         min-height: 5rem
 
          margin-right: 1.5rem
 
@@ -479,6 +487,33 @@ h1,h2,h3,h4,h5,h6
          color: $black
 
          background: no-repeat 0 100% / 100% 50% url("../img/care/care__help-bg.webp")
+
+   .swiper
+      &-container, &-wrapper, &-slide
+   
+      &-container
+         width: 80vw
+
+      &-slide
+
+      &-button
+         &-prev
+            right: 100%
+            left: auto
+
+         &-next
+            left: 100%
+            right: auto
+
+         &-prev, &-next
+            display: none
+            color: $grey
+
+
+      
+
+      
+
 
 /** Safety **/
 
@@ -514,8 +549,8 @@ h1,h2,h3,h4,h5,h6
          flex-basis: 33%
 
          &-img
-            min-width: 50px
-            min-height: 50px
+            min-width: 5rem
+            min-height: 5rem
 
             margin-bottom: 20px
 
@@ -714,8 +749,8 @@ h1,h2,h3,h4,h5,h6
          flex-basis: 32%
 
          &-img
-            min-width: 50px
-            min-height: 50px
+            min-width: 5rem
+            min-height: 5rem
 
             margin-bottom: 20px
          &-subheading
@@ -883,6 +918,8 @@ h1,h2,h3,h4,h5,h6
       justify-content: space-between
       margin-top: 5rem
 
+      width: 100%
+
       &-rewards 
          display: flex
          flex-direction: column
@@ -895,8 +932,8 @@ h1,h2,h3,h4,h5,h6
          margin-bottom: 3rem
 
       &-img
-         min-width: 50px
-         min-height: 50px
+         min-width: 5rem
+         min-height: 5rem
 
          margin-right: 1rem
 
@@ -913,9 +950,20 @@ h1,h2,h3,h4,h5,h6
             @include subdescription
 
       &-reviews
-         flex-basis: 42%
+
+         max-width: 61.4rem
+         max-height: 51.6rem
+
+         
          
          position: relative
+
+
+         transform: translateX(25%)
+         
+
+         display: flex
+         justify-content: center
 
          &:before
             content: ""
@@ -923,14 +971,34 @@ h1,h2,h3,h4,h5,h6
             background-color: #F6F8F9
             z-index: -2
 
-            width: 61.4rem
-            height: 90%
+            width: 100%
+            height: 100%
 
             position: absolute
 
             left: 50%
 
             transform: translateX(-50%)
+
+         .swiper-container-comment
+            width: 100%
+            overflow: hidden
+
+            .swiper-slide
+            
+               padding: 0 8rem
+
+            .swiper-pagination
+               display: block
+               text-align: left
+
+               top: 88%
+               left: 15%
+
+               transform: translateX(-40%)
+
+               width: 40px
+            
 
       &-comment
          display: flex

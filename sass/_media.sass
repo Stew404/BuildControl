@@ -6,18 +6,95 @@
 
    .delivery
       &__products
-         padding: 0 15rem
+         justify-content: space-around
+
+         &-block
+            flex-basis: 45%
+
+   .swiper
+      &-button
+         &-prev, &-next
+            
 
    .safety
       &__equipment
          width: 100vw
 
    .build
+      display: flex
+      flex-direction: column
+      align-items: center
       &__bg
          background: $black
          overflow: hidden
       &__features
-         margin: 0 auto
+         max-width: 80%
+         display: flex
+         flex-direction: column
+         align-items: center
+         &-list
+            max-width: 50%
+            align-items: center
+         &-buttons
+            justify-content: center
+
+
+   .choose
+      &__reasons
+         flex-direction: column
+         align-items: center
+
+         &-rewards
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-around
+            align-items: center
+
+         &-item
+            flex-basis: 60%
+
+         &-reviews
+            transform: translateX(0)
+
+            max-width: 70vw
+
+            padding-bottom: 2rem
+
+            &:before
+               width: 100vw
+               height: 100%
+
+            .swiper-container-comment
+               width: 100%
+               overflow: hidden
+
+               .swiper-slide
+                  padding: 0
+
+                  transform: translateX(5%)
+
+               .swiper-pagination
+                  display: block
+                  text-align: center
+
+                  top: 93%
+                  left: 50%
+
+                  transform: translateX(-40%)
+
+                  width: 40px
+
+         &-comment
+            margin: 0 auto
+            width: 75%
+
+            &-text
+               font-size: 2rem
+               line-height: 3.2rem
+
+               margin-top: 3rem
+
+            
 
 
 
@@ -59,12 +136,10 @@
       
    .delivery
       &__products
-         padding: 0 7rem
          &-block
-            &:nth-child(n+4)
-               margin-top: 0
-            &:nth-child(n+3)
-               margin-top: 3.5rem
+            margin: 0 auto
+
+
    
    .safety
       &__equipment
@@ -102,21 +177,23 @@
             text-align: center
 
             margin-top: 1.5rem
+
+         &-img
+            width: 31.5rem
+            height: 20.4rem
          
    .delivery
       &__description
          padding: 0 5rem
-      &__products
-         justify-content: space-around
-         &-block
-            max-width: 55rem
-            &:nth-child(n)
-               margin-top: 0
-            &:nth-child(n+2)
-               margin-top: 3.5rem
+
+
+   .slider
+      &-container, &-wrapper, &-slide
+         display: block
 
    .safety
       &__capabilities
+         justify-content: space-around
          &-block
             flex-basis: 45%
 
@@ -129,6 +206,7 @@
          justify-content: space-around
 
          &-block
+            margin-top: 5rem
             flex-basis: 45%
 
    .work
@@ -150,33 +228,7 @@
       &__content
          align-items: center
 
-   .choose
-      &__reasons
-         flex-direction: column
-         align-items: center
-
-         &-rewards
-            flex-direction: row
-            flex-wrap: wrap
-            justify-content: space-around
-
-         &-item
-            flex-basis: 85%
-
-         &-reviews
-            &:before
-               width: 100vw
-               height: 100%
-
-         &-comment
-            margin: 0 auto
-            width: 75%
-
-            &-text
-               font-size: 2rem
-               line-height: 3.2rem
-
-               margin-top: 3rem
+   
 
    .rewards
       padding: 0
@@ -209,7 +261,7 @@
    html
       font-size: 7px
    .main
-      padding: 7.5rem 4rem 0 4rem
+      padding: 7.5rem 0 0 0
       background: none
       &__button
          flex-direction: column
@@ -220,14 +272,16 @@
             width: 16.6rem
    .capabilities
       flex-direction: column
-      padding: 0 60px
+      padding: 0 4rem
       &__element
          margin-top: 10px
    .chaos
       &__img
          display: none
+   .care
+      padding: 0
    .course
-      padding: 0 4rem
+      padding: 0
 
    .safety
       &__capabilities
@@ -238,6 +292,11 @@
          padding-top: 3rem
          &-img
             display: none
+
+   .build
+
+     
+            
 
    .rewards
       &__block

@@ -1,3 +1,6 @@
+
+// Mobile Menu
+
 const headerButton = document.querySelector(".header__button");
       headerMenuClose = document.querySelector(".header__menu-close");
       headerMenu = document.querySelector(".header__menu_mobile");
@@ -28,7 +31,7 @@ const headerButton = document.querySelector(".header__button");
                headerMenu.style.display = "none";
             }
          }, 1);
-
-
       });
+
+
 
