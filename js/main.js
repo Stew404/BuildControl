@@ -33,5 +33,21 @@ const headerButton = document.querySelector(".header__button");
          }, 1);
       });
 
+const headerMenuElem = document.querySelectorAll('.header__menu-element');
 
+
+      headerMenuElem.forEach((currentValue)=>{
+         currentValue.addEventListener("click", () => {
+         let animationClose = setInterval(() => {
+            translateX += 3;
+            headerMenu.style.transform = "translateX(" + translateX + "%)";
+            if (translateX >= 100) {
+               clearInterval(animationClose);
+               headerMenu.style.transform = "translateX(100%)";
+               headerMenu.style.display = "none";
+            }
+            }, 1);
+         });
+      })
+      
 
