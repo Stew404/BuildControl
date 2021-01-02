@@ -28,12 +28,12 @@
          background: $black
          overflow: hidden
       &__features
-         max-width: 80%
+         max-width: 100%
          display: flex
          flex-direction: column
          align-items: center
          &-list
-            max-width: 50%
+            max-width: 60%
             align-items: center
          &-buttons
             justify-content: center
@@ -121,6 +121,13 @@
       padding: 0 50px
 
       text-align: center
+
+      &__heading
+         text-align: center
+         
+      &__description
+         text-align: center
+
       
       &__img
          display: none
@@ -161,6 +168,8 @@
          &_mobile
             width: 100vw
             height: 100vh
+   .main
+      padding: 7.5rem 2rem 0 2rem
    .chaos
       &__img
          display: block
@@ -294,7 +303,22 @@
             display: none
 
    .build
+      &__features
+         &-heading
+            font-size: 3rem
+      &__capabilities
+         &-block
+            flex-basis: 80%
 
+   .choose
+      &__reasons
+         &-item
+            flex-basis: 90%
+
+   .contact
+      &__heading
+         font-size: 3.6rem
+         line-height: 4.2rem
      
             
 
