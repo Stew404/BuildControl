@@ -154,6 +154,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  margin-right: 0;
 }
 
 .header__menu_mobile .header__menu-order {
